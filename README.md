@@ -4,7 +4,7 @@ Claude slop that it wrote in 5minutes. I've never even looked at the code, god
 knows what is in there. But it works for my use case of wanting to loop over
 specific parts of youtube videos, over and over and over and over again.
 
-![screenshot of extension](screen.png)
+![screenshot of extension](screen.jpg)
 
 ## Installation
 
