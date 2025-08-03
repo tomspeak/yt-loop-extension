@@ -1,0 +1,130 @@
+:root {
+  --loop-bg: #fff;
+  --loop-border: rgba(0,0,0,0.1);
+  --loop-text-primary: #030303;
+  --loop-text-secondary: #606060;
+  --loop-slider-bg: rgba(0,0,0,0.05);
+  --loop-accent: #065fd4;
+  --loop-accent-hover: #0F4C81;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --loop-bg: #0f0f0f;
+    --loop-border: rgba(255,255,255,0.1);
+    --loop-text-primary: #f1f1f1;
+    --loop-text-secondary: #aaa;
+    --loop-slider-bg: rgba(255,255,255,0.1);
+    --loop-accent: #065fd4;
+    --loop-accent-hover: #0F4C81;
+  }
+}
+
+.yt-loop-controls {
+  background: var(--loop-bg);
+  padding: 12px 0 24px 0;
+  margin: 0;
+  color: var(--loop-text-primary);
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.yt-loop-info {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex-shrink: 0;
+}
+
+.yt-range-slider {
+  position: relative;
+  height: 16px;
+  flex: 1;
+  display: flex;
+  align-items: center;
+  min-width: 200px;
+}
+
+.yt-range-track {
+  position: relative;
+  width: 100%;
+  height: 2px;
+  background: var(--loop-slider-bg);
+  border-radius: 1px;
+}
+
+.yt-range-progress {
+  position: absolute;
+  height: 100%;
+  background: var(--loop-accent);
+  border-radius: 1px;
+  transition: none;
+}
+
+.yt-range-thumb {
+  position: absolute;
+  width: 12px;
+  height: 12px;
+  background: var(--loop-accent);
+  border-radius: 50%;
+  cursor: pointer;
+  transform: translate(-50%, -50%);
+  top: 50%;
+  transition: none;
+  border: 1px solid var(--loop-bg);
+  box-shadow: 0 1px 2px rgba(0,0,0,0.15);
+}
+
+.yt-range-thumb:hover {
+  transform: translate(-50%, -50%) scale(1.2);
+}
+
+.yt-range-thumb:active {
+  transform: translate(-50%, -50%) scale(1.3);
+}
+
+.yt-range-thumb-start {
+  z-index: 2;
+}
+
+.yt-range-thumb-end {
+  z-index: 1;
+}
+
+.yt-loop-time-display {
+  font-size: 10px;
+  color: var(--loop-text-secondary);
+  font-family: 'SF Mono', 'Monaco', 'Inconsolata', monospace;
+  font-weight: 400;
+  white-space: nowrap;
+}
+
+.yt-loop-toggle {
+  background: var(--loop-accent);
+  color: #fff;
+  border: none;
+  padding: 4px 8px;
+  border-radius: 12px;
+  cursor: pointer;
+  font-size: 10px;
+  font-weight: 500;
+  transition: none;
+  white-space: nowrap;
+}
+
+.yt-range-tooltip {
+  position: absolute;
+  top: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  color: var(--loop-text-secondary);
+  font-size: 9px;
+  font-family: 'SF Mono', 'Monaco', 'Inconsolata', monospace;
+  white-space: nowrap;
+  pointer-events: none;
+  z-index: 10;
+}
